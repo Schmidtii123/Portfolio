@@ -27,7 +27,6 @@ function App() {
     <Nav/> 
     <article>
       <Velkommen/>
-      {/* <Test/> */}
       <Projects id="project"/>
     </article>
 
@@ -41,7 +40,6 @@ function App() {
       </div>
       <Contact/>
      
-      {/* <Footer />  */}
 
       </section>
   )

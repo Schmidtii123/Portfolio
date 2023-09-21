@@ -1,4 +1,3 @@
-// import { Routes, Route, Navigate } from "react-router-dom";
 import './reset.css'
 import './App.css'
 import Nav from './components/Nav'

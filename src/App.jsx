@@ -27,12 +27,12 @@ function App() {
     <article>
       <Velkommen/>
       <Projects id="project"/>
-    </article>
 
 
-      <div id="about">
+      </article>
+      <div id="about"> 
         {posts.map((post) => (
-
+          
           <OmMig key={post.id} post={post} />
           ))}
           

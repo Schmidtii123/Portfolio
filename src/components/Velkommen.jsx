@@ -1,6 +1,6 @@
 export default function Velkommen(){
     return(
-        <div className="velkommen">
+        <div className="velkommen" id="velkommen">
 
         <div className="velkommen_text">
       <h1>Hej og velkommen til min portefølje!</h1>

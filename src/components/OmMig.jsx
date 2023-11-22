@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 export default function OmMig({post}){
     AOS.init();
     return(
-        <article>
+        <article >
             <h2 className='title'>{parse(post.title.rendered)}</h2>
             <div className='text_og_billede' data-aos="fade-down">
             <span className='content'>

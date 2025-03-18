@@ -27,7 +27,7 @@ export default function Projects() {
 
                             <a className="github" href="https://github.com/eaaa-dob-wu-e24a/awu-exam-Schmidtii123" target="_blank">
                                 <img className="github_img" src="./github.png" alt="Billede af Gibhub logoet" />Kode</a>
-                            <a className="code" href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" >
+                            <a className="code" href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer">
                                 <img className="github_img" src="./demo_img.png" alt="Billede af en computer med en demo" />
                                 Live Demo
                             </a>
@@ -66,7 +66,7 @@ export default function Projects() {
                     </div>
 
                 </div>
-                <div className="project2" data-aos="fade-right">
+                <div className="project2" data-aos="fade-left">
 
                     <div className="img_container project_github">
                         <a href="https://keramik-2-semester-eksamen.vercel.app/" target="_blank">

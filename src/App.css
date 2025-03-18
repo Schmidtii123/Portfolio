@@ -130,7 +130,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 90rem;
+  height: 95rem;
   margin-bottom: 10rem;
 }
 .projects a{

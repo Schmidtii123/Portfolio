@@ -7,19 +7,49 @@ export default function Projects() {
         <article id='project'>
             <h2 className="title">Projekter</h2>
             <div className="projects">
-                <div className="project1" data-aos="fade-left">
+                <div className="project1" data-aos="fade-right">
+                    <div>
+                        <div className="img_container project_github">
+                            <a href="https://awu-exam-schmidtii123.onrender.com/" target="_blank">
+                                <img className="projects_img" src="./Bookify-3-semester.png" alt="Billede af forsiden til den gamle slagter keramik" />
+                            </a>
+
+                        </div>
+                    </div>
                     <div className="title_text">
                         <h3>
-                            Mark Ebert Webdoc
+                            Bookify - Bog app/hjemmeside til telefon
                         </h3>
-                        <p>I andet semester arbejdede vi på en webdokumentar, hvor vi brugte parallax-effekter for at skabe en engagerende brugeroplevelse. Projektet fokuserede på kunstneren Mark Ebert og kombinerede mine færdigheder inden for multimediedesign og webudvikling for at præsentere hans kreative rejse interaktivt og visuelt imponerende.
+                        <p>I 2 semester af webudvikling fik vi til opgave at lave en Bog side ved brug af typescript og React router 7, Der var nogle creatier der skulle være med, Den er dog ikke helt færdig, men kun lavet til mobil, og er derfor ikke responsiv.
 
                         </p>
                         <div className="github_code">
 
-                            <a className="github" href="https://github.com/Schmidtii123/Webdoc" target="_blank">
+                            <a className="github" href="https://github.com/eaaa-dob-wu-e24a/awu-exam-Schmidtii123" target="_blank">
                                 <img className="github_img" src="./github.png" alt="Billede af Gibhub logoet" />Kode</a>
-                            <a className="code" href="https://brozat.dk/Webdoc/" target="_blank" >
+                            <a className="code" href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" >
+                                <img className="github_img" src="./demo_img.png" alt="Billede af en computer med en demo" />
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div className="project1" data-aos="fade-right">
+                    <div className="title_text">
+                        <h3>
+                            BookBazr - Webapp
+                        </h3>
+                        <p>I 3 semester fik vi til opgave at lave en webapp, her er en webapp, der kan hjælpe studerende med at sælge og købe brugte studiebøger, så de kan spare penge. Der er mulighed for at chatte, og med brug af ISBN nummer henter vi bogens information fra en google API, Den er kun lavet til mobil, og er derfor ikke responsiv.
+
+                        </p>
+                        <div className="github_code">
+
+                            <a className="github" href="https://github.com/Schmidtii123/webapp" target="_blank">
+                                <img className="github_img" src="./github.png" alt="Billede af Gibhub logoet" />Kode</a>
+                            <a className="code" href="https://bookbazr.vercel.app/" target="_blank" >
                                 <img className="github_img" src="./demo_img.png" alt="Billede af en computer med en demo" />
                                 Live Demo
                             </a>
@@ -28,8 +58,8 @@ export default function Projects() {
 
                     <div>
                         <div className="img_container project_github">
-                            <a href="https://brozat.dk/Webdoc/" target="_blank">
-                                <img className="projects_img" src="./mark_ebert.png" alt="Billede af forsiden til den gamle slagter keramik" />
+                            <a href="https://bookbazr.vercel.app/" target="_blank">
+                                <img className="projects_img" src="./BookBazr.png" alt="Billede af forsiden til den gamle slagter keramik" />
                             </a>
 
                         </div>
@@ -68,16 +98,16 @@ export default function Projects() {
                 <div className="project1" data-aos="fade-left">
                     <div className="title_text">
                         <h3>
-                            BookBazr - Webapp
+                            Mark Ebert Webdoc
                         </h3>
-                        <p>I 3 semester fik vi til opgave at lave en webapp, her er en webapp, der kan hjælpe studerende med at sælge og købe brugte studiebøger, så de kan spare penge. Der er mulighed for at chatte, og med brug af ISBN nummer henter vi bogens information fra en google API, Den er kun lavet til mobil, og er derfor ikke responsiv.
+                        <p>I andet semester arbejdede vi på en webdokumentar, hvor vi brugte parallax-effekter for at skabe en engagerende brugeroplevelse. Projektet fokuserede på kunstneren Mark Ebert og kombinerede mine færdigheder inden for multimediedesign og webudvikling for at præsentere hans kreative rejse interaktivt og visuelt imponerende.
 
                         </p>
                         <div className="github_code">
 
-                            <a className="github" href="https://github.com/Schmidtii123/webapp" target="_blank">
+                            <a className="github" href="https://github.com/Schmidtii123/Webdoc" target="_blank">
                                 <img className="github_img" src="./github.png" alt="Billede af Gibhub logoet" />Kode</a>
-                            <a className="code" href="https://bookbazr.vercel.app/" target="_blank" >
+                            <a className="code" href="https://brozat.dk/Webdoc/" target="_blank" >
                                 <img className="github_img" src="./demo_img.png" alt="Billede af en computer med en demo" />
                                 Live Demo
                             </a>
@@ -86,14 +116,15 @@ export default function Projects() {
 
                     <div>
                         <div className="img_container project_github">
-                            <a href="https://bookbazr.vercel.app/" target="_blank">
-                                <img className="projects_img" src="./BookBazr.png" alt="Billede af forsiden til den gamle slagter keramik" />
+                            <a href="https://brozat.dk/Webdoc/" target="_blank">
+                                <img className="projects_img" src="./mark_ebert.png" alt="Billede af forsiden til den gamle slagter keramik" />
                             </a>
 
                         </div>
                     </div>
 
                 </div>
+
             </div>
         </article>
     )

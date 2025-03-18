@@ -130,7 +130,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 75rem;
+  height: 90rem;
   margin-bottom: 10rem;
 }
 .projects a{
@@ -245,9 +245,10 @@ body{
 .content{
   margin-top: 5rem;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: start;
   line-height: 2rem;
   width: 35%;}
+
 .content_2{
   margin-top: 5rem;
   font-size: 1.2rem;

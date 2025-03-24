@@ -348,7 +348,7 @@ input[type="submit"]{
 
 .some{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     float: left;
     margin-left: 12%;
@@ -356,8 +356,8 @@ input[type="submit"]{
 }
 
 .some_img{
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 .some_img:hover{

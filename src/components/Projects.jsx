@@ -7,7 +7,7 @@ export default function Projects() {
         <article id='project'>
             <h2 className="title">Projekter</h2>
             <div className="projects">
-                <div className="project1" data-aos="fade-right">
+                <div className="project1" data-aos="fade-left">
                     <div>
                         <div className="img_container project_github">
                             <a href="https://awu-exam-schmidtii123.onrender.com/" target="_blank">
@@ -33,10 +33,45 @@ export default function Projects() {
                             </a>
                         </div>
                     </div>
+                </div>
+
+                <div className="project1" data-aos="fade-right">
+                    <div>
+                        <div className="img_container project_github">
+                            <a href="https://awu-exam-schmidtii123.onrender.com/" target="_blank">
+                                <img className="projects_img" src="./BookBynight.png" alt="Billede af forsiden til den gamle slagter keramik" />
+                            </a>
+
+                        </div>
+                    </div>
+                    <div className="title_text">
+                        <h3>
+                            BookByNight - bordbooking på klubber og bar i Århus - user og admin side
+                        </h3>
+                        <p className='project_text'>User - login
+                            <br /> <br />
+                            Mail: eaaebsc@students.eaaa.dk <br />
+                            password 123 <br /><br />
+                            Admin - login https://bookbynight.vercel.app/homepage <br /><br />
+                            Mail: rekom@gmail.com <br />
+                            Password: 123
+
+                        </p>
+                        <div className="github_code">
+
+                            <a className="github" href="https://github.com/Schmidtii123/final-project-nemesis" target="_blank">
+                                <img className="github_img" src="./github.png" alt="Billede af Gibhub logoet" />Kode</a>
+                            <a className="code" href="https://bookbynight-nams.vercel.app/" target="_blank" rel="noreferrer">
+                                <img className="github_img" src="./demo_img.png" alt="Billede af en computer med en demo" />
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
 
 
 
                 </div>
+
                 <div className="project1" data-aos="fade-left">
                     <div className="title_text">
                         <h3>
@@ -66,6 +101,7 @@ export default function Projects() {
                     </div>
 
                 </div>
+
                 <div className="project2" data-aos="fade-right">
 
                     <div className="img_container project_github">

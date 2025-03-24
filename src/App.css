@@ -141,7 +141,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 95rem;
+  height: 120rem;
   margin-bottom: 10rem;
 }
 .projects a{
@@ -158,6 +158,13 @@ body{
   max-width: 100%;
   width: 35rem;
   border-radius: 10px;
+}
+
+.project_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: start;
 }
 
 .project1{

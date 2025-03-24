@@ -37,7 +37,7 @@ export default function Projects() {
 
 
                 </div>
-                <div className="project1" data-aos="fade-right">
+                <div className="project1" data-aos="fade-left">
                     <div className="title_text">
                         <h3>
                             BookBazr - Webapp
@@ -66,7 +66,7 @@ export default function Projects() {
                     </div>
 
                 </div>
-                <div className="project2" data-aos="fade-left">
+                <div className="project2" data-aos="fade-right">
 
                     <div className="img_container project_github">
                         <a href="https://keramik-2-semester-eksamen.vercel.app/" target="_blank">

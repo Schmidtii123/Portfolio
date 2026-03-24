@@ -148,7 +148,18 @@ export default function Contact() {
       />
       <div>
         <h1 className='title'>Kontakt mig</h1>
-        <p className='contact_text'>Tak fordi du tog dig tid til at udforske min portefølje. Jeg sætter stor pris på din interesse. Hvis du har spørgsmål, feedback eller ønsker at samarbejde på et projekt, er du mere end velkommen til at kontakte mig. Jeg ser frem til at høre fra dig og besvare eventuelle henvendelser.</p>
+        <p className='contact_text'>
+          Tak fordi du tog dig tid til at udforske min portefølje. Jeg sætter stor pris på din interesse. Hvis du har spørgsmål, feedback eller ønsker at samarbejde på et projekt, er du mere end velkommen til at kontakte mig. Jeg ser frem til at høre fra dig og besvare eventuelle henvendelser.
+        </p>
+
+        {/* CV-sektion */}
+        <div className="cv-section">
+          <h2>Mit CV</h2>
+          <p>Du kan downloade mit CV ved at klikke på knappen nedenfor:</p>
+          <a href="/Mit_CV.pdf" download className="cv-button">
+            Download mit CV
+          </a>
+        </div>
       </div>
       <div className='contact'>
         <div>

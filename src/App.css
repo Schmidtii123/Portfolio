@@ -197,6 +197,7 @@ body{
   justify-content: flex-start;
   max-width: 30%;
   text-align: center;
+  line-height: 1.5rem;
 }
 .title_text h3{
   font-size: 1.5rem;
@@ -420,6 +421,37 @@ input[type="submit"]{
   opacity: 0.5;
   cursor: not-allowed;
 }
+.cv-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cv-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.cv-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cv-button {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #007BFF;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #0056b3;
+}
 
 /* --------------------------------- Footer ------------------------------------- */
 .footer{
@@ -453,4 +485,4 @@ input[type="submit"]{
     
 }
 
-
+/* 

@@ -20,7 +20,7 @@ export default function Projects() {
                         <h3>
                             Bookify - Bog app/hjemmeside til telefon
                         </h3>
-                        <p>I 2 semester af webudvikling fik vi til opgave at lave en Bog side ved brug af typescript og React router 7, Der var nogle creatier der skulle være med, Den er dog ikke helt færdig, men kun lavet til mobil, og er derfor ikke responsiv.
+                        <p>I 2 semester af webudvikling fik vi til opgave at lave en Bog side ved brug af typescript og React router 7, Der var nogle krav som skulle overholdes. Den er kun lavet til mobil, og er derfor ikke responsiv.
 
                         </p>
                         <div className="github_code">

@@ -1,9 +1,6 @@
 import parse from 'html-react-parser';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 export default function OmMig({ post }) {
-    AOS.init();
     return (
         <article >
             <h2 className='title'>{parse(post.title.rendered)}</h2>

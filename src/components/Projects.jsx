@@ -1,8 +1,4 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 export default function Projects() {
-
-    AOS.init();
     return (
         <article id='project'>
             <h2 className="title">Projekter</h2>

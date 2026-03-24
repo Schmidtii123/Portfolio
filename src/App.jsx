@@ -6,8 +6,27 @@ import OmMig from './components/OmMig'
 import { useEffect, useState } from "react";
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      offset: 80,
+      once: false,
+      easing: 'ease-out-cubic'
+    });
+
+    // Ensure positions are recalculated after assets are loaded.
+    const handleLoad = () => AOS.refreshHard();
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   const staticPosts = [
     {
       id: 1,

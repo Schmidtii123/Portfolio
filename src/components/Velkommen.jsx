@@ -53,7 +53,7 @@ export default function Velkommen() {
       </div>
 
       <div className="img_container">
-        <img className="velkommen_img" src="./velkommen_forside.png" alt="Billede af mig(Emil Schmidt)" />
+        <img className="velkommen_img" src="./emil_linkedin.png" alt="Billede af mig(Emil Schmidt)" />
       </div>
     </div>
   )

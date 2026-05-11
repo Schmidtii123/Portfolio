@@ -68,7 +68,8 @@ body{
 .velkommen{
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
+
 }
 .velkommen_text{
   max-width: 35%;

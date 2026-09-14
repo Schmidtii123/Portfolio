@@ -1,92 +1,28 @@
 export default function Projects() {
-  const projects = [
-    {
-      className: "project1",
-      animation: "fade-right",
-      title: "Bookify - bogapp til mobil",
-      description: "Bookify er en mobiltilpasset bogapp, hvor brugere kan udforske og søge efter bøger, se bogdetaljer, oprette en profil, gemme favoritter og organisere bøger i egne samlinger. Projektet er bygget med React Router 7, TypeScript, Node.js og MongoDB.",
-      image: "./Bookify-3-semester.png",
-      imageAlt: "Forsiden af Bookify",
-      codeUrl: "https://github.com/eaaa-dob-wu-e24a/awu-exam-Schmidtii123",
-      demoUrl: "https://awu-exam-schmidtii123.onrender.com/",
-    },
-    {
-      className: "project2",
-      animation: "fade-left",
-      title: "Crit Card - Kickstarter",
-      description: "Et koncept til en Crit Cards-platform for DnD-spillere. Brugere kan oprette eller joine en lobby via ID eller link, mens en DM styrer spillet og trækker kort i realtid. Frontend er bygget med Vue og TypeScript, backend med Laravel og realtime-kommunikation med Pusher.",
-      image: "./crit_card.png",
-      imageAlt: "Forsiden af Crit Card",
-      codeUrl: "https://github.com/Schmidtii123/kortspil-backend",
-      demoUrl: "https://chipper-moonbeam-100da6.netlify.app/",
-    },
-    {
-      className: "project1",
-      animation: "fade-right",
-      title: "BookByNight - bordbooking",
-      description: "En løsning til bordbooking på klubber og barer i Aarhus med både bruger- og administrationsside. Projektet håndterer login, reservationer og administration af venue-data.",
-      image: "./BookBynight.png",
-      imageAlt: "Forsiden af BookByNight",
-      codeUrl: "https://github.com/Schmidtii123/final-project-nemesis",
-      demoUrl: "https://bookbynight-nams.vercel.app/",
-    },
-    {
-      className: "project2",
-      animation: "fade-left",
-      title: "Den Gamle Slagter Keramik",
-      description: "Et eksamensprojekt for Den Gamle Slagter Keramik, hvor besøgende kan udforske keramikeres arbejde og booke workshops. Projektet kombinerer interaktivt design med en enkel brugerrejse.",
-      image: "./den_gamle_slagter_keramik.png",
-      imageAlt: "Forsiden af Den Gamle Slagter Keramik",
-      codeUrl: "https://github.com/Schmidtii123/keramik-2.semester-eksamen",
-      demoUrl: "https://keramik-2-semester-eksamen.vercel.app/",
-    },
-    {
-      className: "project1",
-      animation: "fade-right",
-      title: "Mark Ebert Webdoc",
-      description: "En interaktiv webdokumentar om kunstneren Mark Ebert. Projektet bruger parallax-effekter og visuel storytelling til at præsentere hans kreative arbejde.",
-      image: "./mark_ebert.png",
-      imageAlt: "Forsiden af Mark Ebert Webdoc",
-      codeUrl: "https://github.com/Schmidtii123/Webdoc",
-      demoUrl: "https://brozat.dk/Webdoc/",
-    },
-  ];
-
   return (
     <article id="project">
       <h2 className="title">Projekter</h2>
       <div className="projects">
-        {projects.map((project) => (
-          <section
-            className={project.className}
-            data-aos={project.animation}
-            key={project.title}
-          >
-            <div className="img_container project_github">
-              <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                <img
-                  className="projects_img"
-                  src={project.image}
-                  alt={project.imageAlt}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-            </div>
-            <div className="title_text">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <a href={project.codeUrl} target="_blank" rel="noreferrer">
-                <img src="./github.png" alt="GitHub-logo" loading="lazy" decoding="async" />
-                Kode
-              </a>
-              <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                <img src="./demo_img.png" alt="Demo-ikon" loading="lazy" decoding="async" />
-                Live demo
-              </a>
-            </div>
-          </section>
-        ))}
+        <div className="project1" data-aos="fade-right">
+          <div><div className="img_container project_github"><a href="https://chipper-moonbeam-100da6.netlify.app/" target="_blank" rel="noreferrer"><img className="projects_img" src="./crit_card.png" alt="Forsiden af Crit Card" /></a></div></div>
+          <div className="title_text"><h3>Crit Card - Kickstarter</h3><p>På mit afsluttende semester udviklede jeg en webapp som et koncept til en Crit Cards-platform for DnD-spillere. Brugere kan oprette og joine en lobby via ID eller link, mens en DM styrer spillet og trækker kort i realtid.</p><div className="github_code"><a className="github" href="https://github.com/Schmidtii123/kortspil-backend" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://chipper-moonbeam-100da6.netlify.app/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
+        </div>
+        <div className="project1" data-aos="fade-right">
+          <div><div className="img_container project_github"><a href="https://bookbynight-nams.vercel.app/" target="_blank" rel="noreferrer"><img className="projects_img" src="./BookBynight.png" alt="Forsiden af BookByNight" /></a></div></div>
+          <div className="title_text"><h3>BookByNight - bordbooking på klubber og barer i Aarhus</h3><p className="project_text">BookByNight har både bruger- og administrationsside og håndterer login, reservationer og venue-data.</p><div className="github_code"><a className="github" href="https://github.com/Schmidtii123/final-project-nemesis" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://bookbynight-nams.vercel.app/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
+        </div>
+        <div className="project1" data-aos="fade-left">
+          <div><div className="img_container project_github"><a href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="projects_img" src="./Bookify-3-semester.png" alt="Forsiden af Bookify" /></a></div></div>
+          <div className="title_text"><h3>Bookify - bogapp til mobil</h3><p>Bookify er en mobiltilpasset bogapp, hvor brugere kan udforske og søge efter bøger, se bogdetaljer, oprette en profil, gemme favoritter og organisere bøger i egne samlinger. Projektet er bygget med React Router 7, TypeScript, Node.js og MongoDB.</p><div className="github_code"><a className="github" href="https://github.com/eaaa-dob-wu-e24a/awu-exam-Schmidtii123" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
+        </div>
+        <div className="project1" data-aos="fade-right">
+          <div className="img_container project_github"><a href="https://keramik-2-semester-eksamen.vercel.app/" target="_blank" rel="noreferrer"><img className="projects_img" src="./den_gamle_slagter_keramik.png" alt="Forsiden af Den Gamle Slagter Keramik" /></a></div>
+          <div className="title_text"><h3>Den Gamle Slagter Keramik</h3><p>I 2. semester udviklede jeg en hjemmeside til Den Gamle Slagter Keramik, hvor besøgende kan udforske keramikeres arbejde og booke workshops.</p><div className="github_code"><a className="github" href="https://github.com/Schmidtii123/keramik-2.semester-eksamen" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://keramik-2-semester-eksamen.vercel.app/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
+        </div>
+        <div className="project2" data-aos="fade-left">
+          <div className="title_text"><h3>Mark Ebert Webdoc</h3><p>En interaktiv webdokumentar om kunstneren Mark Ebert, der bruger parallax-effekter og visuel storytelling.</p><div className="github_code"><a className="github" href="https://github.com/Schmidtii123/Webdoc" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://brozat.dk/Webdoc/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
+          <div><div className="img_container project_github"><a href="https://brozat.dk/Webdoc/" target="_blank" rel="noreferrer"><img className="projects_img" src="./mark_ebert.png" alt="Forsiden af Mark Ebert Webdoc" /></a></div></div>
+        </div>
       </div>
     </article>
   );

@@ -21,7 +21,7 @@ export default function Projects() {
       demoUrl: "https://chipper-moonbeam-100da6.netlify.app/",
     },
     {
-      className: "project3",
+      className: "project1",
       animation: "fade-right",
       title: "BookByNight - bordbooking",
       description: "En løsning til bordbooking på klubber og barer i Aarhus med både bruger- og administrationsside. Projektet håndterer login, reservationer og administration af venue-data.",
@@ -31,7 +31,7 @@ export default function Projects() {
       demoUrl: "https://bookbynight-nams.vercel.app/",
     },
     {
-      className: "project4",
+      className: "project2",
       animation: "fade-left",
       title: "Den Gamle Slagter Keramik",
       description: "Et eksamensprojekt for Den Gamle Slagter Keramik, hvor besøgende kan udforske keramikeres arbejde og booke workshops. Projektet kombinerer interaktivt design med en enkel brugerrejse.",
@@ -41,7 +41,7 @@ export default function Projects() {
       demoUrl: "https://keramik-2-semester-eksamen.vercel.app/",
     },
     {
-      className: "project5",
+      className: "project1",
       animation: "fade-right",
       title: "Mark Ebert Webdoc",
       description: "En interaktiv webdokumentar om kunstneren Mark Ebert. Projektet bruger parallax-effekter og visuel storytelling til at præsentere hans kreative arbejde.",

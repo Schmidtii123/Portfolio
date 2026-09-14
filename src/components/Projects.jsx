@@ -3,17 +3,18 @@ export default function Projects() {
     <article id="project">
       <h2 className="title">Projekter</h2>
       <div className="projects">
+        <div className="project1" data-aos="fade-left">
+          <div><div className="img_container project_github"><a href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="projects_img" src="./Bookify-3-semester.png" alt="Forsiden af Bookify" /></a></div></div>
+          <div className="title_text"><h3>Bookify - bogapp til mobil</h3><p>Bookify er en mobiltilpasset bogapp, hvor brugere kan udforske og søge efter bøger, se bogdetaljer, oprette en profil, gemme favoritter og organisere bøger i egne samlinger. Projektet er bygget med React Router 7, TypeScript, Node.js og MongoDB.</p><div className="github_code"><a className="github" href="https://github.com/eaaa-dob-wu-e24a/awu-exam-Schmidtii123" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
+        </div>
+
         <div className="project1" data-aos="fade-right">
           <div><div className="img_container project_github"><a href="https://chipper-moonbeam-100da6.netlify.app/" target="_blank" rel="noreferrer"><img className="projects_img" src="./crit_card.png" alt="Forsiden af Crit Card" /></a></div></div>
           <div className="title_text"><h3>Crit Card - Kickstarter</h3><p>På mit afsluttende semester udviklede jeg en webapp som et koncept til en Crit Cards-platform for DnD-spillere. Brugere kan oprette og joine en lobby via ID eller link, mens en DM styrer spillet og trækker kort i realtid.</p><div className="github_code"><a className="github" href="https://github.com/Schmidtii123/kortspil-backend" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://chipper-moonbeam-100da6.netlify.app/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
         </div>
-        <div className="project1" data-aos="fade-right">
+        <div className="project1" data-aos="fade-left">
           <div><div className="img_container project_github"><a href="https://bookbynight-nams.vercel.app/" target="_blank" rel="noreferrer"><img className="projects_img" src="./BookBynight.png" alt="Forsiden af BookByNight" /></a></div></div>
           <div className="title_text"><h3>BookByNight - bordbooking på klubber og barer i Aarhus</h3><p className="project_text">BookByNight har både bruger- og administrationsside og håndterer login, reservationer og venue-data.</p><div className="github_code"><a className="github" href="https://github.com/Schmidtii123/final-project-nemesis" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://bookbynight-nams.vercel.app/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
-        </div>
-        <div className="project1" data-aos="fade-left">
-          <div><div className="img_container project_github"><a href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="projects_img" src="./Bookify-3-semester.png" alt="Forsiden af Bookify" /></a></div></div>
-          <div className="title_text"><h3>Bookify - bogapp til mobil</h3><p>Bookify er en mobiltilpasset bogapp, hvor brugere kan udforske og søge efter bøger, se bogdetaljer, oprette en profil, gemme favoritter og organisere bøger i egne samlinger. Projektet er bygget med React Router 7, TypeScript, Node.js og MongoDB.</p><div className="github_code"><a className="github" href="https://github.com/eaaa-dob-wu-e24a/awu-exam-Schmidtii123" target="_blank" rel="noreferrer"><img className="github_img" src="./github.png" alt="GitHub-logo" />Kode</a><a className="code" href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a></div></div>
         </div>
         <div className="project1" data-aos="fade-right">
           <div className="img_container project_github"><a href="https://keramik-2-semester-eksamen.vercel.app/" target="_blank" rel="noreferrer"><img className="projects_img" src="./den_gamle_slagter_keramik.png" alt="Forsiden af Den Gamle Slagter Keramik" /></a></div>

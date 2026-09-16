@@ -3,6 +3,17 @@ export default function Projects() {
     <article id="project">
       <h2 className="title">Projekter</h2>
       <div className="projects">
+        <div className="project1" data-aos="fade-right">
+          <div><div className="img_container project_github"><a href="https://imposter.brozat.dk/" target="_blank" rel="noreferrer"><img className="projects_img" src="./imposter.png" alt="Forsiden af Hvem er imposter?" /></a></div></div>
+          <div className="title_text">
+            <h3>Hvem er imposter? - selskabsspil</h3>
+            <p>Et browserbaseret selskabsspil med bluff og skjulte roller. Spil lokalt ved at sende én telefon rundt, eller opret og deltag i et online-rum, hvor alle spiller fra deres egen enhed. Projektet er stadig under udvikling.</p>
+            <div className="github_code">
+              <a className="code" href="https://imposter.brozat.dk/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a>
+            </div>
+          </div>
+        </div>
+
         <div className="project1" data-aos="fade-left">
            <div className="title_text">
             <h3>Bookify - bogapp til mobil</h3>

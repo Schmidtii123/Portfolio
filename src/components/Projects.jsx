@@ -4,14 +4,15 @@ export default function Projects() {
       <h2 className="title">Projekter</h2>
       <div className="projects">
         <div className="project1" data-aos="fade-left">
-          <div><div className="img_container project_github"><a href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="projects_img" src="./Bookify-3-semester.png" alt="Forsiden af Bookify" /></a></div></div>
-          <div className="title_text">
+           <div className="title_text">
             <h3>Bookify - bogapp til mobil</h3>
             <p>Bookify er en mobiltilpasset bogapp, hvor brugere kan udforske og søge efter bøger, se bogdetaljer, oprette en profil, gemme favoritter og organisere bøger i egne samlinger. Projektet er bygget med React Router 7, TypeScript, Node.js og MongoDB.</p>
             <div className="github_code">
               <a className="code" href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="github_img" src="./demo_img.png" alt="Demo-ikon" />Live Demo</a>
               </div>
               </div>
+          <div><div className="img_container project_github"><a href="https://awu-exam-schmidtii123.onrender.com/" target="_blank" rel="noreferrer"><img className="projects_img" src="./Bookify-3-semester.png" alt="Forsiden af Bookify" /></a></div></div>
+         
         </div>
 
         <div className="project1" data-aos="fade-right">

@@ -69,7 +69,7 @@ export default function ProjectDetail() {
           <span className="eyebrow">Om projektet</span>
           {project.stack.length > 0 && (
             <>
-              <h2>Værktøjerne bag</h2>
+              <h2>Techstack</h2>
               {renderTechnologyList(project.stack)}
             </>
           )}

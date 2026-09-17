@@ -1,50 +1,74 @@
-const skills = [
-  ["./html_logo.png", "HTML5 logo"],
-  ["./css3_logo.png", "CSS3 logo"],
-  ["./javascript-logo.png", "JavaScript logo"],
-  ["./react-logo.webp", "React logo"],
-  ["/MySQL.svg", "MySQL logo"],
-  ["/git-logo.png", "Git logo"],
-  ["/vue.png", "Vue.js logo"],
-  ["/mongodb.png", "MongoDB logo"],
-  ["/php.png", "PHP logo"],
-  ["/next-js.png", "Next.js logo"],
-  ["/react-router.png", "React Router logo"],
-  ["/typescript.png", "TypeScript logo"],
-  ["/node-js.png", "Node.js logo"],
-  ["/github.png", "GitHub logo"],
-];
+import { Link } from "react-router-dom";
+import { renderTechnologyList } from "./project-ui";
 
 export default function Velkommen() {
   return (
-    <div className="velkommen" id="velkommen">
-      <div className="velkommen_text">
-        <h1>Hej og velkommen til min portefølje!</h1>
-        <p>
-          Jeg er Emil Schmidt, men de fleste kalder mig bare Schmidt eller
-          Schmidtii. Her kan du udforske mine projekter og de teknologier,
-          jeg arbejder med.
-        </p>
-        <h2>Mine færdigheder</h2>
-        <div className="logos">
-          {skills.map(([src, alt]) => (
-            <div className="logo-container" key={src}>
-              <img src={src} alt={alt} loading="lazy" decoding="async" />
+    <section className="hero" id="velkommen" aria-labelledby="hero-title">
+      <div className="container hero-grid">
+        <div className="hero-copy">
+          <div className="eyebrow">
+            <span className="small-line" /> Webudvikler med blik for detaljen
+          </div>
+          <h1 id="hero-title">
+            Fra gode idéer
+            <br />
+            til digitale
+            <br />
+            <em>oplevelser</em>
+            <span className="accent-dot" aria-hidden="true">•</span>
+          </h1>
+          <p>
+            Jeg hedder Emil Schmidt og arbejder med programmering. Jeg udvikler
+            hjemmesider og webapps med fokus på godt design og brugervenlighed.
+          </p>
+          <div className="hero-actions">
+            <Link className="button button-accent" to="/#project">
+              Se mit arbejde <span aria-hidden="true">↗</span>
+            </Link>
+            <Link className="quiet-link" to="/#about">
+              Lidt om mig <span aria-hidden="true">↓</span>
+            </Link>
+          </div>
+        </div>
+        <div className="hero-portrait">
+          <span className="portrait-index">01 — Mennesket bag koden</span>
+          <div className="portrait-stage">
+            <div className="portrait-orbit" />
+            <span className="portrait-star" aria-hidden="true">
+              ✳
+            </span>
+            <img
+              src="/emil_linkedin.png"
+              alt="Emil Schmidt med armene over kors"
+              width="480"
+              height="590"
+            />
+            <div className="portrait-caption">
+              <span>Hej, jeg er Emil.</span>
+              <span>
+                Også kendt som Schmidtii <span aria-hidden="true">↗</span>
+              </span>
             </div>
-          ))}
+          </div>
+          <div className="portrait-footnote">
+            <span>Design. Kode. Nysgerrighed.</span>
+            <span aria-hidden="true">&lt;/&gt;</span>
+          </div>
         </div>
       </div>
-
-      <div className="img_container">
-        <img
-          className="velkommen_img"
-          src="./emil_linkedin.png"
-          alt="Billede af Emil Schmidt"
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-        />
+      <div className="container hero-bottom">
+        <span className="eyebrow">En del af min værktøjskasse</span>
+        {renderTechnologyList([
+          "React",
+          "TypeScript",
+          "Node.js",
+          "MongoDB",
+          "Git",
+        ])}
+        <a className="scroll-note" href="#project">
+          Scroll og udforsk <span aria-hidden="true">↓</span>
+        </a>
       </div>
-    </div>
+    </section>
   );
 }

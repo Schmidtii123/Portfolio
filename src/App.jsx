@@ -1,66 +1,61 @@
-import './reset.css'
-import './App.css'
-import Nav from './components/Nav'
-import Velkommen from './components/Velkommen'
-import OmMig from './components/OmMig'
-import { useEffect, useState } from "react";
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { useEffect } from "react";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
+import "./reset.css";
+import "./App.css";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ProjectPage from "./pages/ProjectPage";
+import ProjectDetail from "./pages/ProjectDetail";
+import { projects } from "./data/projects";
 
-function App() {
+export default function App() {
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    AOS.init({
-      duration: 800,
-      offset: 80,
-      once: false,
-      easing: 'ease-out-cubic'
+    const project = projects.find(
+      (item) => pathname === `/projekter/${item.slug}`,
+    );
+    document.title = project
+      ? `${project.title} — Emil Schmidt`
+      : pathname === "/projekter"
+        ? "Projekter — Emil Schmidt"
+        : "Emil Schmidt — Webudvikler";
+    const frame = requestAnimationFrame(() => {
+      if (hash)
+        document
+          .getElementById(hash.slice(1))
+          ?.scrollIntoView({ behavior: "instant" });
+      else window.scrollTo({ top: 0, behavior: "instant" });
     });
-
-    // Ensure positions are recalculated after assets are loaded.
-    const handleLoad = () => AOS.refreshHard();
-    window.addEventListener('load', handleLoad);
-
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
-
-  const staticPosts = [
-    {
-      id: 1,
-      title: { rendered: "Om Mig" },
-      content: { rendered: "<p>Hej, jeg hedder Emil og jeg er 25 år gammel...</p>" }
-    }
-  ];
-
-  const [posts] = useState(staticPosts);
-
+    return () => cancelAnimationFrame(frame);
+  }, [pathname, hash]);
   return (
-    <section>
-
-
-
-      <Nav/>
-
-
-
-      <article>
-        <Velkommen/>
-        <Projects id="project" />
-
-
-      </article>
-      <div id="about">
-        {posts.map((post) => (
-          <OmMig key={post.id} post={post} />
-        ))}
-
-      </div>
-      <Contact />
-    </section>
-  )
+    <>
+      <a className="skip-link" href="#main">
+        Spring til indhold
+      </a>
+      <Nav />
+      <main id="main" tabIndex={-1}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projekter" element={<ProjectPage />} />
+          <Route path="/projekter/:slug" element={<ProjectDetail />} />
+          <Route
+            path="*"
+            element={
+              <section className="container not-found">
+                <span className="eyebrow">404 / En lille omvej</span>
+                <h1>Her er vist tomt.</h1>
+                <p>Men der er masser at udforske på forsiden.</p>
+                <Link className="button button-dark" to="/">
+                  Tilbage til forsiden ↗
+                </Link>
+              </section>
+            }
+          />
+        </Routes>
+      </main>
+      <Footer />
+    </>
+  );
 }
-
-export default App

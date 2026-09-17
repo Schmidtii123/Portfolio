@@ -1,19 +1,20 @@
+import { Link, NavLink } from "react-router-dom";
 
-export default function Nav(){
-
-    return (
-      <nav className="nav">
-        <a href="#velkommen">
-        <img className="logo" src="./logo.png" alt="Logo" />
-        </a>
-        <div className="nav_links">
-          <a href="#project">Projekter</a>
-          <a href="#about">Om mig</a>
-          <a href="#contact">Kontakt</a>
+export default function Nav() {
+  return (
+    <header className="site-header">
+      <nav className="container navigation" aria-label="Hovednavigation">
+        <Link className="wordmark" to="/" aria-label="Emil Schmidt — forside">
+          Emil Schmidt<span>.</span>
+        </Link>
+        <div className="nav-links">
+          <NavLink to="/projekter">Projekter</NavLink>
+          <Link to="/#about">Om mig</Link>
+          <Link className="nav-contact" to="/#contact">
+            Lad os tale <span aria-hidden="true">↗</span>
+          </Link>
         </div>
       </nav>
-    );
-  
+    </header>
+  );
 }
-
-

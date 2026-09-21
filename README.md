@@ -20,6 +20,7 @@ npm run dev
 - De første to projekter i listen vises på forsiden.
 - Designvariabler og responsive layouts findes i `src/App.css`.
 - Billeder, CV og stack-logoer ligger i `public/`. Kilder til nye logoer findes i `public/stacks/README.md`.
+- Bookify-visningen bruger `public/bookify-preview-mask.svg` til at skjule baggrunden omkring telefonerne uden at ændre originalbilledet. Masken passer til `Bookify-3-semester.png` og skal tilpasses, hvis billedets komposition ændres.
 - Kontaktformularen bruger den eksisterende EmailJS-service og skabelon. Feltnavnene er `user_name`, `user_email` og `message`.
 
 ## Kontrol og build

@@ -507,9 +507,16 @@ p {
   transition: transform 0.4s;
 }
 .project-visual.bookify > img {
-  width: 78%;
-  object-fit: cover;
-  object-position: top;
+  width: min(78%, 388px);
+  height: auto;
+  object-fit: contain;
+}
+.bookify img {
+  /* Mask only the space around the phones; keep the original UI pixels. */
+  -webkit-mask: url("/bookify-preview-mask.svg") center / 100% 100% no-repeat;
+  mask: url("/bookify-preview-mask.svg") center / 100% 100% no-repeat;
+  border-radius: 0;
+  box-shadow: none;
 }
 .project-visual:hover > img {
   transform: translateY(-5px) scale(1.015);
@@ -914,7 +921,10 @@ p {
 }
 .detail-image.bookify img {
   max-width: 720px;
+  height: auto;
   margin: auto;
+  border-radius: 0;
+  box-shadow: none;
 }
 .detail-content {
   display: grid;
@@ -1290,6 +1300,9 @@ p {
   }
   .project-heading {
     margin-top: 20px;
+  }
+  .project-visual.bookify > img {
+    width: min(100%, 338px);
   }
   .project-heading h3 {
     font-size: 25px;

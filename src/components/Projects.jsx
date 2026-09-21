@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "./Icons";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import { renderProjectCard } from "./project-ui";
@@ -27,7 +28,7 @@ export default function Projects() {
             </p>
             <Link className="text-link" to="/projekter">
               Se alle projekter <span className="count">04</span>
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true"><ArrowUpRight /></span>
             </Link>
           </div>
         </div>

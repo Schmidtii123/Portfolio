@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "./components/Icons";
 import { useEffect } from "react";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import "./reset.css";
@@ -48,7 +49,7 @@ export default function App() {
                 <h1>Her er vist tomt.</h1>
                 <p>Men der er masser at udforske på forsiden.</p>
                 <Link className="button button-dark" to="/">
-                  Tilbage til forsiden ↗
+                  Tilbage til forsiden <ArrowUpRight />
                 </Link>
               </section>
             }

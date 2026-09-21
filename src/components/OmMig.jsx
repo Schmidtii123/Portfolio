@@ -1,3 +1,4 @@
+import { ArrowUpRight, ArrowDown } from "./Icons";
 import { renderTechnologyList } from "./project-ui";
 import { technologies } from "../data/projects";
 
@@ -19,7 +20,7 @@ export default function OmMig() {
             loading="lazy"
           />
           <span className="about-signature">
-            Emil Schmidt <span aria-hidden="true">↗</span>
+            Emil Schmidt <span aria-hidden="true"><ArrowUpRight /></span>
           </span>
         </div>
         <div className="about-copy">
@@ -41,7 +42,7 @@ export default function OmMig() {
             feedback.
           </p>
           <a className="text-link" href="/Mit_CV.pdf" download>
-            Hent mit CV <span aria-hidden="true">↓</span>
+            Hent mit CV <span aria-hidden="true"><ArrowDown /></span>
           </a>
           <div className="about-tools">
             <h3>Teknologier, jeg arbejder med</h3>

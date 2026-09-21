@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "./Icons";
 import { Link } from "react-router-dom";
 import { technologies } from "../data/projects";
 
@@ -39,7 +40,7 @@ export function renderProjectCard(project, index) {
           decoding="async"
         />
         <span className="project-open" aria-hidden="true">
-          ↗
+          <ArrowUpRight />
         </span>
       </Link>
       <div className="project-heading">
@@ -56,7 +57,7 @@ export function renderProjectCard(project, index) {
       <p>{project.description}</p>
       {project.stack.length > 0 && renderTechnologyList(project.stack)}
       <Link className="text-link" to={`/projekter/${project.slug}`}>
-        Udforsk projektet <span aria-hidden="true">↗</span>
+        Udforsk projektet <span aria-hidden="true"><ArrowUpRight /></span>
       </Link>
     </article>
   );

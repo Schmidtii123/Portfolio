@@ -1,3 +1,4 @@
+import { ArrowUpRight, ArrowLeft } from "../components/Icons";
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../data/projects";
 import { renderTechnologyList } from "../components/project-ui";
@@ -11,7 +12,7 @@ export default function ProjectDetail() {
         <span className="eyebrow">404 / Projektet findes ikke</span>
         <h1>En idé til en anden dag.</h1>
         <Link className="button button-dark" to="/projekter">
-          Se alle projekter ↗
+          Se alle projekter <ArrowUpRight />
         </Link>
       </section>
     );
@@ -19,7 +20,7 @@ export default function ProjectDetail() {
   return (
     <article className="container project-detail section-space">
       <Link className="back-link" to="/projekter">
-        ← Alle projekter
+        <ArrowLeft /> Alle projekter
       </Link>
       <div className="detail-heading">
         <div>
@@ -47,7 +48,7 @@ export default function ProjectDetail() {
             target="_blank"
             rel="noreferrer"
           >
-            Åbn live demo <span aria-hidden="true">↗</span>
+            Åbn live demo <span aria-hidden="true"><ArrowUpRight /></span>
           </a>
           {project.github && (
             <a
@@ -56,7 +57,7 @@ export default function ProjectDetail() {
               target="_blank"
               rel="noreferrer"
             >
-              Se koden på GitHub ↗
+              Se koden på GitHub <ArrowUpRight />
             </a>
           )}
         </div>
@@ -95,7 +96,7 @@ export default function ProjectDetail() {
           <span className="eyebrow">Næste projekt</span>
           <h2>{next.title}</h2>
         </div>
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true"><ArrowUpRight /></span>
       </Link>
     </article>
   );

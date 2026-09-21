@@ -1,3 +1,4 @@
+import { ArrowUpRight, ArrowLeft } from "../components/Icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
@@ -16,7 +17,7 @@ export default function ProjectPage() {
   return (
     <section className="container projects-page section-space">
       <Link className="back-link" to="/">
-        ← Til forsiden
+        <ArrowLeft /> Til forsiden
       </Link>
       <div className="section-heading">
         <div>
@@ -58,7 +59,7 @@ export default function ProjectPage() {
       <div className="project-page-cta">
         <h2>Skal vi skabe noget sammen?</h2>
         <Link className="button button-dark" to="/#contact">
-          Lad os tage en snak <span aria-hidden="true">↗</span>
+          Lad os tage en snak <span aria-hidden="true"><ArrowUpRight /></span>
         </Link>
       </div>
     </section>

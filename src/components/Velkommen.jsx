@@ -1,3 +1,4 @@
+import { ArrowUpRight, ArrowDown, Asterisk } from "./Icons";
 import { Link } from "react-router-dom";
 import { renderTechnologyList } from "./project-ui";
 
@@ -23,10 +24,10 @@ export default function Velkommen() {
           </p>
           <div className="hero-actions">
             <Link className="button button-accent" to="/#project">
-              Se mit arbejde <span aria-hidden="true">↗</span>
+              Se mit arbejde <span aria-hidden="true"><ArrowUpRight /></span>
             </Link>
             <Link className="quiet-link" to="/#about">
-              Lidt om mig <span aria-hidden="true">↓</span>
+              Lidt om mig <span aria-hidden="true"><ArrowDown /></span>
             </Link>
           </div>
         </div>
@@ -35,7 +36,7 @@ export default function Velkommen() {
           <div className="portrait-stage">
             <div className="portrait-orbit" />
             <span className="portrait-star" aria-hidden="true">
-              ✳
+              <Asterisk />
             </span>
             <img
               src="/emil_linkedin.png"
@@ -46,7 +47,7 @@ export default function Velkommen() {
             <div className="portrait-caption">
               <span>Hej, jeg er Emil.</span>
               <span>
-                Også kendt som Schmidtii <span aria-hidden="true">↗</span>
+                Også kendt som Schmidtii <span aria-hidden="true"><ArrowUpRight /></span>
               </span>
             </div>
           </div>
@@ -66,7 +67,7 @@ export default function Velkommen() {
           "Git",
         ])}
         <a className="scroll-note" href="#project">
-          Scroll og udforsk <span aria-hidden="true">↓</span>
+          Scroll og udforsk <span aria-hidden="true"><ArrowDown /></span>
         </a>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { ArrowUpRight, ArrowDown } from "./Icons";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -51,14 +52,14 @@ export default function Contact() {
             En god idé starter
             <br />
             med et <em>hej.</em>
-            <span className="accent-dot" aria-hidden="true">↗</span>
+            <span className="accent-dot" aria-hidden="true"><ArrowUpRight /></span>
           </h2>
           <p>
             Har du et projekt i tankerne, en mulighed eller bare et spørgsmål?
             Jeg vil gerne høre fra dig.
           </p>
           <a className="contact-email" href="mailto:schmidtii2000@gmail.com">
-            schmidtii2000@gmail.com <span aria-hidden="true">↗</span>
+            schmidtii2000@gmail.com <span aria-hidden="true"><ArrowUpRight /></span>
           </a>
           <div className="social-links">
             <a
@@ -66,17 +67,17 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              LinkedIn ↗
+              LinkedIn <ArrowUpRight />
             </a>
             <a
               href="https://github.com/Schmidtii123"
               target="_blank"
               rel="noreferrer"
             >
-              GitHub ↗
+              GitHub <ArrowUpRight />
             </a>
             <a href="/Mit_CV.pdf" download>
-              Mit CV ↓
+              Mit CV <ArrowDown />
             </a>
           </div>
         </div>
@@ -161,7 +162,7 @@ export default function Contact() {
               disabled={loading}
             >
               {loading ? "Sender …" : "Send besked"}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true"><ArrowUpRight /></span>
             </button>
           </div>
           <div className={`form-status ${status}`} role="status">

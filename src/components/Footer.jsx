@@ -1,3 +1,4 @@
+import { ArrowUp } from "./Icons";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
         </Link>
         <p>© {new Date().getFullYear()} Emil Schmidt</p>
         <a href="#main">
-          Til toppen <span aria-hidden="true">↑</span>
+          Til toppen <span aria-hidden="true"><ArrowUp /></span>
         </a>
       </div>
     </footer>

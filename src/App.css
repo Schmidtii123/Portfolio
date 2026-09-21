@@ -949,6 +949,14 @@ p {
   font-size: 34px;
   margin-bottom: 22px;
 }
+.stack-group + .stack-group {
+  margin-top: 24px;
+}
+.stack-group h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
 .detail-lead {
   font-size: 15px;
   line-height: 1.9;

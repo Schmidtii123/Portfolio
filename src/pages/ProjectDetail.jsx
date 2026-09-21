@@ -71,7 +71,14 @@ export default function ProjectDetail() {
           {project.stack.length > 0 && (
             <>
               <h2>Techstack</h2>
-              {renderTechnologyList(project.stack)}
+              {project.stackGroups
+                ? Object.entries(project.stackGroups).map(([group, stack]) => (
+                    <div className="stack-group" key={group}>
+                      <h3>{group}</h3>
+                      {renderTechnologyList(stack)}
+                    </div>
+                  ))
+                : renderTechnologyList(project.stack)}
             </>
           )}
         </aside>

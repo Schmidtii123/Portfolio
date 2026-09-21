@@ -2,6 +2,11 @@ import { ArrowUpRight, ArrowDown } from "./Icons";
 import { renderTechnologyList } from "./project-ui";
 import { technologies } from "../data/projects";
 
+// Product-specific labels can share a logo; show each technology only once here.
+const skillNames = [...new Map(
+  Object.entries(technologies).map(([name, logo]) => [logo, name]),
+).values()];
+
 export default function OmMig() {
   return (
     <section
@@ -46,7 +51,7 @@ export default function OmMig() {
           </a>
           <div className="about-tools">
             <h3>Teknologier, jeg arbejder med</h3>
-            {renderTechnologyList(Object.keys(technologies))}
+            {renderTechnologyList(skillNames)}
           </div>
         </div>
       </div>

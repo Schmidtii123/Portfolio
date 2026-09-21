@@ -16,6 +16,15 @@ export const technologies = {
   Laravel: "/stacks/laravel.svg",
   Pinia: "/stacks/pinia.svg",
   Pusher: "/stacks/pusher.svg",
+  Vite: "/vite.svg",
+  "Vercel Functions": "/stacks/vercel.svg",
+  "Upstash Redis": "/stacks/upstash.svg",
+  "Pusher Channels": "/stacks/pusher.svg",
+};
+
+const imposterStack = {
+  Frontend: ["React", "TypeScript", "Vite", "CSS"],
+  Backend: ["TypeScript", "Vercel Functions", "Upstash Redis", "Pusher Channels"],
 };
 
 export const projects = [
@@ -29,10 +38,11 @@ export const projects = [
     status: "Under udvikling",
     description:
       "Et selskabsspil med bluff, skjulte roller og mistænkeligt gode pokerfjæs. Spil sammen på én telefon eller fra hver jeres enhed.",
-    stack: ["TypeScript"],
+    stack: [...new Set(Object.values(imposterStack).flat())],
+    stackGroups: imposterStack,
     demo: "https://imposter.brozat.dk/",
     intro:
-      "Et browserbaseret selskabsspil, der gør det nemt at samle vennerne om en omgang bluff og skjulte roller. Ingen app skal installeres — spillet åbnes direkte i browseren.",
+      "Et browserbaseret selskabsspil, der gør det nemt at samle vennerne om en omgang bluff og skjulte roller. Frontenden er bygget med React, TypeScript, Vite og CSS. Backenden bruger TypeScript, Vercel Functions, Upstash Redis og Pusher Channels. Ingen app skal installeres — spillet åbnes direkte i browseren.",
     features: [
       [
         "Én telefon. Hele selskabet.",

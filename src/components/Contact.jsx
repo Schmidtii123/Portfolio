@@ -76,7 +76,7 @@ export default function Contact() {
             >
               GitHub <ArrowUpRight />
             </a>
-            <a href="/Mit_CV.pdf" download>
+            <a href="/CV_Emil_B_Schmidt.pdf" download>
               Mit CV <ArrowDown />
             </a>
           </div>

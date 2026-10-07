@@ -1,6 +1,7 @@
 import { ArrowUpRight, ArrowDown } from "./Icons";
 import { renderTechnologyList } from "./project-ui";
 import { technologies } from "../data/projects";
+import { useLanguage } from "../i18n";
 
 // Product-specific labels can share a logo; show each technology only once here.
 const skillNames = [...new Map(
@@ -8,6 +9,8 @@ const skillNames = [...new Map(
 ).values()];
 
 export default function OmMig() {
+  const { language, t } = useLanguage();
+  const en = language === "en";
   return (
     <section
       className="about-section section-space"
@@ -16,10 +19,10 @@ export default function OmMig() {
     >
       <div className="container about-grid">
         <div className="about-portrait">
-          <span className="eyebrow">Mere end en skærmfuld kode</span>
+          <span className="eyebrow">{en ? "More than a screenful of code" : "Mere end en skærmfuld kode"}</span>
           <img
             src="/smil_emil.png"
-            alt="Emil Schmidt smiler med hænderne bag ryggen"
+            alt={en ? "Emil Schmidt smiling with his hands behind his back" : "Emil Schmidt smiler med hænderne bag ryggen"}
             width="430"
             height="510"
             loading="lazy"
@@ -29,29 +32,28 @@ export default function OmMig() {
           </span>
         </div>
         <div className="about-copy">
-          <span className="eyebrow">02 / Lidt om mig</span>
+          <span className="eyebrow">02 / {en ? "About me" : "Lidt om mig"}</span>
           <h2 id="about-title">
-            Nysgerrig af natur.
+            {en ? "Curious by nature." : "Nysgerrig af natur."}
             <br />
-            <em>Udvikler af lyst.</em>
+            <em>{en ? "Developer by choice." : "Udvikler af lyst."}</em>
           </h2>
           <p>
-            Hej, jeg er Emil — men de fleste kalder mig Schmidt eller Schmidtii.
-            Jeg kan godt lide at forstå, hvordan ting hænger sammen, og at
-            omsætte den forståelse til noget, andre kan bruge.
+            {en
+              ? "Hi, I'm Emil — though most people call me Schmidt or Schmidtii. I enjoy understanding how things fit together and turning that insight into something useful for others."
+              : "Hej, jeg er Emil — men de fleste kalder mig Schmidt eller Schmidtii. Jeg kan godt lide at forstå, hvordan ting hænger sammen, og at omsætte den forståelse til noget, andre kan bruge."}
           </p>
           <p>
-            Jeg går op i løsninger, der både fungerer og føles gode at bruge.
-            Jeg trives med at lære nyt, fordybe mig og blive udfordret. Og jeg
-            tror på, at de bedste idéer bliver endnu bedre med sparring og
-            feedback.
+            {en
+              ? "I care about solutions that work well and feel good to use. I thrive on learning, going deep and being challenged — and I believe the best ideas become even better through collaboration and feedback."
+              : "Jeg går op i løsninger, der både fungerer og føles gode at bruge. Jeg trives med at lære nyt, fordybe mig og blive udfordret. Og jeg tror på, at de bedste idéer bliver endnu bedre med sparring og feedback."}
           </p>
           <a className="text-link" href="/Mit_CV.pdf" download>
-            Hent mit CV <span aria-hidden="true"><ArrowDown /></span>
+            {en ? "Download my CV" : "Hent mit CV"} <span aria-hidden="true"><ArrowDown /></span>
           </a>
           <div className="about-tools">
-            <h3>Teknologier, jeg arbejder med</h3>
-            {renderTechnologyList(skillNames)}
+            <h3>{en ? "Technologies I work with" : "Teknologier, jeg arbejder med"}</h3>
+            {renderTechnologyList(skillNames, t("technologies"))}
           </div>
         </div>
       </div>

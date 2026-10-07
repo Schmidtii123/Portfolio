@@ -2,9 +2,9 @@ import { ArrowUpRight } from "./Icons";
 import { Link } from "react-router-dom";
 import { technologies } from "../data/projects";
 
-export function renderTechnologyList(stack) {
+export function renderTechnologyList(stack, label = "Teknologier") {
   return (
-    <ul className="tech-list" aria-label="Teknologier">
+    <ul className="tech-list" aria-label={label}>
       {stack.map((name) => (
         <li key={name}>
           <img
@@ -21,13 +21,16 @@ export function renderTechnologyList(stack) {
   );
 }
 
-export function renderProjectCard(project, index) {
+export function renderProjectCard(project, index, labels = {}) {
+  const readProject = labels.readProject || "Læs om";
+  const screenshot = labels.screenshot || "Skærmbillede af";
+  const explore = labels.explore || "Udforsk projektet";
   return (
     <article className="project-card" key={project.slug}>
       <Link
         className={`project-visual ${project.theme}`}
         to={`/projekter/${project.slug}`}
-        aria-label={`Læs om ${project.title}`}
+        aria-label={`${readProject} ${project.title}`}
       >
         <div className="visual-topline">
           <span>{project.type}</span>
@@ -35,7 +38,7 @@ export function renderProjectCard(project, index) {
         </div>
         <img
           src={project.image}
-          alt={`Skærmbillede af ${project.title}`}
+          alt={`${screenshot} ${project.title}`}
           loading="lazy"
           decoding="async"
         />
@@ -55,9 +58,9 @@ export function renderProjectCard(project, index) {
         )}
       </div>
       <p>{project.description}</p>
-      {project.stack.length > 0 && renderTechnologyList(project.stack)}
+      {project.stack.length > 0 && renderTechnologyList(project.stack, labels.technologies)}
       <Link className="text-link" to={`/projekter/${project.slug}`}>
-        Udforsk projektet <span aria-hidden="true"><ArrowUpRight /></span>
+        {explore} <span aria-hidden="true"><ArrowUpRight /></span>
       </Link>
     </article>
   );

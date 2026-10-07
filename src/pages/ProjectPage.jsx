@@ -1,65 +1,76 @@
 import { ArrowUpRight, ArrowLeft } from "../components/Icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { projects } from "../data/projects";
 import { renderProjectCard } from "../components/project-ui";
-
-const filters = ["Alle", "Webapps", "Interaktive fortællinger"];
+import { useLanguage } from "../i18n";
 
 export default function ProjectPage() {
-  const [filter, setFilter] = useState("Alle");
+  const { language, projects, t } = useLanguage();
+  const en = language === "en";
+  const filters = [
+    { id: "all", label: en ? "All" : "Alle" },
+    { id: "webapps", label: "Webapps" },
+    { id: "stories", label: en ? "Interactive stories" : "Interaktive fortællinger" },
+  ];
+  const [filter, setFilter] = useState("all");
   const visible = projects.filter(
     (project) =>
-      filter === "Alle" ||
-      project.category ===
-        (filter === "Webapps" ? "Webapp" : "Interaktiv fortælling"),
+      filter === "all" ||
+      (filter === "webapps" && project.category === "Webapp") ||
+      (filter === "stories" && ["Interaktiv fortælling", "Interactive story"].includes(project.category)),
   );
+  const cardLabels = {
+    readProject: en ? "Read about" : "Læs om",
+    screenshot: en ? "Screenshot of" : "Skærmbillede af",
+    explore: en ? "Explore the project" : "Udforsk projektet",
+    technologies: t("technologies"),
+  };
   return (
     <section className="container projects-page section-space">
       <Link className="back-link" to="/">
-        <ArrowLeft /> Til forsiden
+        <ArrowLeft /> {en ? "Home" : "Til forsiden"}
       </Link>
       <div className="section-heading">
         <div>
           <span className="eyebrow">
-            Portfolio / {String(projects.length).padStart(2, "0")} projekter
+            Portfolio / {String(projects.length).padStart(2, "0")} {en ? "projects" : "projekter"}
           </span>
           <h1>
-            Et kig ind i<br />
-            mit <em>arbejde.</em>
+            {en ? "A look into" : "Et kig ind i"}<br />
+            {en ? <>my <em>work.</em></> : <>mit <em>arbejde.</em></>}
           </h1>
         </div>
         <p>
-          Forskellige idéer. Forskellige teknologier.
+          {en ? "Different ideas. Different technologies." : "Forskellige idéer. Forskellige teknologier."}
           <br />
-          Den samme lyst til at skabe noget, der virker.
+          {en ? "The same drive to create things that work." : "Den samme lyst til at skabe noget, der virker."}
         </p>
       </div>
-      <div className="project-filters" aria-label="Filtrer projekter">
-        {filters.map((name) => (
+      <div className="project-filters" aria-label={en ? "Filter projects" : "Filtrer projekter"}>
+        {filters.map(({ id, label }) => (
           <button
-            key={name}
+            key={id}
             type="button"
-            aria-pressed={filter === name}
-            onClick={() => setFilter(name)}
+            aria-pressed={filter === id}
+            onClick={() => setFilter(id)}
           >
-            {name}
-            {name === "Alle" && <span>{projects.length}</span>}
+            {label}
+            {id === "all" && <span>{projects.length}</span>}
           </button>
         ))}
       </div>
       <p className="sr-only" role="status">
-        Viser {visible.length} projekter
+        {en ? `Showing ${visible.length} projects` : `Viser ${visible.length} projekter`}
       </p>
       <div className="project-grid">
         {visible.map((project) =>
-          renderProjectCard(project, projects.indexOf(project)),
+          renderProjectCard(project, projects.indexOf(project), cardLabels),
         )}
       </div>
       <div className="project-page-cta">
-        <h2>Skal vi skabe noget sammen?</h2>
+        <h2>{en ? "Shall we create something together?" : "Skal vi skabe noget sammen?"}</h2>
         <Link className="button button-dark" to="/#contact">
-          Lad os tage en snak <span aria-hidden="true"><ArrowUpRight /></span>
+          {en ? "Let's talk" : "Lad os tage en snak"} <span aria-hidden="true"><ArrowUpRight /></span>
         </Link>
       </div>
     </section>

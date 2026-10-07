@@ -229,6 +229,47 @@ p {
   color: var(--accent);
   font-size: 18px;
 }
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid #ffffff38;
+  border-radius: 999px;
+}
+.language-switcher button {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 27px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  filter: grayscale(0.7);
+  opacity: 0.62;
+  transition:
+    background 0.2s,
+    filter 0.2s,
+    opacity 0.2s,
+    transform 0.2s;
+}
+.language-switcher button:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.language-switcher button.active {
+  background: #ffffff18;
+  filter: grayscale(0);
+  opacity: 1;
+}
+.language-switcher svg {
+  width: 19px;
+  height: 14px;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px #ffffff25;
+}
 .hero {
   background: var(--ink);
   color: var(--paper);
@@ -1261,8 +1302,11 @@ p {
     font-size: 20px;
   }
   .nav-links {
-    gap: 17px;
+    gap: 12px;
     font-size: 11px;
+  }
+  .nav-links > a:nth-child(2) {
+    display: none;
   }
   .nav-contact {
     padding: 0;
@@ -1271,6 +1315,13 @@ p {
   }
   .nav-contact span {
     display: none;
+  }
+  .language-switcher {
+    gap: 2px;
+  }
+  .language-switcher button {
+    width: 27px;
+    height: 25px;
   }
   .hero-grid {
     grid-template-columns: 1fr;

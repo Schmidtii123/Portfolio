@@ -1,8 +1,11 @@
 import { ArrowUpRight, ArrowDown } from "./Icons";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useLanguage } from "../i18n";
 
 export default function Contact() {
+  const { language } = useLanguage();
+  const en = language === "en";
   const form = useRef(null);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
@@ -13,10 +16,10 @@ export default function Contact() {
     const values = new FormData(form.current);
     const nextErrors = {};
     if (!values.get("user_name").trim())
-      nextErrors.user_name = "Skriv dit navn.";
+      nextErrors.user_name = en ? "Enter your name." : "Skriv dit navn.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.get("user_email").trim()))
-      nextErrors.user_email = "Skriv en gyldig e-mailadresse.";
-    if (!values.get("message").trim()) nextErrors.message = "Skriv en besked.";
+      nextErrors.user_email = en ? "Enter a valid email address." : "Skriv en gyldig e-mailadresse.";
+    if (!values.get("message").trim()) nextErrors.message = en ? "Enter a message." : "Skriv en besked.";
     setErrors(nextErrors);
     setStatus("");
     if (Object.keys(nextErrors).length) {
@@ -47,16 +50,17 @@ export default function Contact() {
     >
       <div className="container contact-grid">
         <div className="contact-copy">
-          <span className="eyebrow">03 / Lad os tale</span>
+          <span className="eyebrow">03 / {en ? "Let's talk" : "Lad os tale"}</span>
           <h2 id="contact-title">
-            En god idé starter
+            {en ? "A great idea starts" : "En god idé starter"}
             <br />
-            med et <em>hej.</em>
+            {en ? <>with a <em>hello.</em></> : <>med et <em>hej.</em></>}
             <span className="accent-dot" aria-hidden="true"><ArrowUpRight /></span>
           </h2>
           <p>
-            Har du et projekt i tankerne, en mulighed eller bare et spørgsmål?
-            Jeg vil gerne høre fra dig.
+            {en
+              ? "Have a project in mind, an opportunity, or just a question? I'd love to hear from you."
+              : "Har du et projekt i tankerne, en mulighed eller bare et spørgsmål? Jeg vil gerne høre fra dig."}
           </p>
           <a className="contact-email" href="mailto:schmidtii2000@gmail.com">
             schmidtii2000@gmail.com <span aria-hidden="true"><ArrowUpRight /></span>
@@ -77,7 +81,7 @@ export default function Contact() {
               GitHub <ArrowUpRight />
             </a>
             <a href="/CV_Emil_B_Schmidt.pdf" download>
-              Mit CV <ArrowDown />
+              {en ? "My CV" : "Mit CV"} <ArrowDown />
             </a>
           </div>
         </div>
@@ -90,12 +94,12 @@ export default function Contact() {
         >
           <div className="form-row">
             <div className="form-field">
-              <label htmlFor="user-name">Dit navn</label>
+              <label htmlFor="user-name">{en ? "Your name" : "Dit navn"}</label>
               <input
                 id="user-name"
                 name="user_name"
                 autoComplete="name"
-                placeholder="Hvad hedder du?"
+                placeholder={en ? "What's your name?" : "Hvad hedder du?"}
                 required
                 aria-invalid={Boolean(errors.user_name)}
                 aria-describedby={errors.user_name ? "name-error" : undefined}
@@ -111,13 +115,13 @@ export default function Contact() {
               )}
             </div>
             <div className="form-field">
-              <label htmlFor="user-email">Din e-mail</label>
+              <label htmlFor="user-email">{en ? "Your email" : "Din e-mail"}</label>
               <input
                 id="user-email"
                 type="email"
                 name="user_email"
                 autoComplete="email"
-                placeholder="dig@eksempel.dk"
+                placeholder={en ? "you@example.com" : "dig@eksempel.dk"}
                 required
                 aria-invalid={Boolean(errors.user_email)}
                 aria-describedby={errors.user_email ? "email-error" : undefined}
@@ -134,12 +138,12 @@ export default function Contact() {
             </div>
           </div>
           <div className="form-field">
-            <label htmlFor="message">Hvad har du på hjerte?</label>
+            <label htmlFor="message">{en ? "What's on your mind?" : "Hvad har du på hjerte?"}</label>
             <textarea
               id="message"
               name="message"
               rows="4"
-              placeholder="Fortæl lidt om din idé …"
+              placeholder={en ? "Tell me a little about your idea …" : "Fortæl lidt om din idé …"}
               required
               aria-invalid={Boolean(errors.message)}
               aria-describedby={errors.message ? "message-error" : undefined}
@@ -155,24 +159,25 @@ export default function Contact() {
             )}
           </div>
           <div className="form-submit">
-            <span>Jeg glæder mig til at høre fra dig.</span>
+            <span>{en ? "I look forward to hearing from you." : "Jeg glæder mig til at høre fra dig."}</span>
             <button
               className="button button-accent"
               type="submit"
               disabled={loading}
             >
-              {loading ? "Sender …" : "Send besked"}
+              {loading ? (en ? "Sending …" : "Sender …") : (en ? "Send message" : "Send besked")}
               <span aria-hidden="true"><ArrowUpRight /></span>
             </button>
           </div>
           <div className={`form-status ${status}`} role="status">
-            {status === "success" &&
-              "Tak for din besked! Jeg vender tilbage hurtigst muligt."}
+            {status === "success" && (en
+              ? "Thanks for your message! I'll get back to you as soon as possible."
+              : "Tak for din besked! Jeg vender tilbage hurtigst muligt.")}
             {status === "error" && (
               <>
-                Beskeden kunne ikke sendes. Prøv igen, eller{" "}
+                {en ? "The message could not be sent. Try again, or " : "Beskeden kunne ikke sendes. Prøv igen, eller "}
                 <a href="mailto:schmidtii2000@gmail.com">
-                  skriv direkte på e-mail
+                  {en ? "email me directly" : "skriv direkte på e-mail"}
                 </a>
                 .
               </>

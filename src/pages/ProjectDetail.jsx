@@ -1,18 +1,20 @@
 import { ArrowUpRight, ArrowLeft } from "../components/Icons";
 import { Link, useParams } from "react-router-dom";
-import { projects } from "../data/projects";
 import { renderTechnologyList } from "../components/project-ui";
+import { useLanguage } from "../i18n";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
+  const { language, projects, t } = useLanguage();
+  const en = language === "en";
   const project = projects.find((item) => item.slug === slug);
   if (!project)
     return (
       <section className="container not-found">
-        <span className="eyebrow">404 / Projektet findes ikke</span>
-        <h1>En idé til en anden dag.</h1>
+        <span className="eyebrow">404 / {en ? "Project not found" : "Projektet findes ikke"}</span>
+        <h1>{en ? "An idea for another day." : "En idé til en anden dag."}</h1>
         <Link className="button button-dark" to="/projekter">
-          Se alle projekter <ArrowUpRight />
+          {en ? "View all projects" : "Se alle projekter"} <ArrowUpRight />
         </Link>
       </section>
     );
@@ -20,7 +22,7 @@ export default function ProjectDetail() {
   return (
     <article className="container project-detail section-space">
       <Link className="back-link" to="/projekter">
-        <ArrowLeft /> Alle projekter
+        <ArrowLeft /> {en ? "All projects" : "Alle projekter"}
       </Link>
       <div className="detail-heading">
         <div>
@@ -48,7 +50,7 @@ export default function ProjectDetail() {
             target="_blank"
             rel="noreferrer"
           >
-            Åbn live demo <span aria-hidden="true"><ArrowUpRight /></span>
+            {en ? "Open live demo" : "Åbn live demo"} <span aria-hidden="true"><ArrowUpRight /></span>
           </a>
           {project.github && (
             <a
@@ -57,17 +59,17 @@ export default function ProjectDetail() {
               target="_blank"
               rel="noreferrer"
             >
-              Se koden på GitHub <ArrowUpRight />
+              {en ? "View the code on GitHub" : "Se koden på GitHub"} <ArrowUpRight />
             </a>
           )}
         </div>
       </div>
       <div className={`detail-image ${project.theme}`}>
-        <img src={project.image} alt={`Skærmbillede af ${project.title}`} />
+        <img src={project.image} alt={`${en ? "Screenshot of" : "Skærmbillede af"} ${project.title}`} />
       </div>
       <div className="detail-content">
         <aside>
-          <span className="eyebrow">Om projektet</span>
+          <span className="eyebrow">{en ? "About the project" : "Om projektet"}</span>
           {project.stack.length > 0 && (
             <>
               <h2>Techstack</h2>
@@ -75,15 +77,15 @@ export default function ProjectDetail() {
                 ? Object.entries(project.stackGroups).map(([group, stack]) => (
                     <div className="stack-group" key={group}>
                       <h3>{group}</h3>
-                      {renderTechnologyList(stack)}
+                      {renderTechnologyList(stack, t("technologies"))}
                     </div>
                   ))
-                : renderTechnologyList(project.stack)}
+                : renderTechnologyList(project.stack, t("technologies"))}
             </>
           )}
         </aside>
         <div>
-          <h2>Fra idé til oplevelse.</h2>
+          <h2>{en ? "From idea to experience." : "Fra idé til oplevelse."}</h2>
           <p className="detail-lead">{project.intro}</p>
           <div className="feature-list">
             {project.features.map(([title, text], index) => (
@@ -100,7 +102,7 @@ export default function ProjectDetail() {
       </div>
       <Link className="next-project" to={`/projekter/${next.slug}`}>
         <div>
-          <span className="eyebrow">Næste projekt</span>
+          <span className="eyebrow">{en ? "Next project" : "Næste projekt"}</span>
           <h2>{next.title}</h2>
         </div>
         <span aria-hidden="true"><ArrowUpRight /></span>

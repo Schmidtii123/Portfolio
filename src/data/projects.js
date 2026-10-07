@@ -43,6 +43,30 @@ export const projects = [
     demo: "https://imposter.brozat.dk/",
     intro:
       "Et browserbaseret selskabsspil, der gør det nemt at samle vennerne om en omgang bluff og skjulte roller. Frontenden er bygget med React, TypeScript, Vite og CSS. Backenden bruger TypeScript, Vercel Functions, Upstash Redis og Pusher Channels. Ingen app skal installeres — spillet åbnes direkte i browseren.",
+    en: {
+      title: "Who is the Impostor?",
+      category: "Webapp",
+      type: "Party game",
+      status: "In development",
+      description:
+        "A party game full of bluffing, hidden roles and suspiciously convincing poker faces. Play together on one phone or from your own devices.",
+      intro:
+        "A browser-based party game that makes it easy to gather friends for a round of bluffing and hidden roles. The frontend is built with React, TypeScript, Vite and CSS. The backend uses TypeScript, Vercel Functions, Upstash Redis and Pusher Channels. There is nothing to install — the game runs directly in the browser.",
+      features: [
+        [
+          "One phone. The whole party.",
+          "Play locally by passing the phone around so each player can see their hidden role.",
+        ],
+        [
+          "Together, on separate devices.",
+          "Create or join an online room where everyone plays from their own phone.",
+        ],
+        [
+          "A project in motion.",
+          "The game is still in development, with plenty of room to keep refining the experience.",
+        ],
+      ],
+    },
     features: [
       [
         "Én telefon. Hele selskabet.",
@@ -71,6 +95,28 @@ export const projects = [
     demo: "https://awu-exam-schmidtii123.onrender.com/",
     intro:
       "Bookify er en mobiltilpasset bogapp, der samler opdagelse og organisering af bøger. Projektet er bygget med React Router 7, TypeScript, Node.js og MongoDB.",
+    en: {
+      category: "Webapp",
+      type: "Books & collections",
+      description:
+        "Your next reading adventure, right at your fingertips. A mobile-first book app for discovering books, saving favourites and keeping your reading life in one place.",
+      intro:
+        "Bookify is a mobile-first book app that brings book discovery and organisation together. The project is built with React Router 7, TypeScript, Node.js and MongoDB.",
+      features: [
+        [
+          "Find your next book.",
+          "Explore and search for books, then dive into the details before choosing your next read.",
+        ],
+        [
+          "A personal library.",
+          "Create a profile, save your favourites and organise books into your own collections.",
+        ],
+        [
+          "Built for mobile.",
+          "The experience is designed for a small screen, keeping your books close at hand.",
+        ],
+      ],
+    },
     features: [
       [
         "Find din næste bog.",
@@ -109,6 +155,28 @@ export const projects = [
     github: "https://github.com/Schmidtii123/kortspil-backend",
     intro:
       "På mit afsluttende semester udviklede jeg en webapp som koncept til en Crit Cards-platform for DnD-spillere. Frontenden er bygget med Vue, TypeScript, JavaScript og Pinia, med PHP, Laravel og MySQL på backend. Pusher håndterer realtidskommunikationen.",
+    en: {
+      category: "Webapp",
+      type: "DnD & real-time",
+      description:
+        "A digital card table for DnD players. Gather the group in a lobby and let your Dungeon Master run the game in real time.",
+      intro:
+        "During my final semester, I developed a webapp concept for a Crit Cards platform for DnD players. The frontend is built with Vue, TypeScript, JavaScript and Pinia, with PHP, Laravel and MySQL on the backend. Pusher handles real-time communication.",
+      features: [
+        [
+          "Gather the adventurers.",
+          "Players can create and join a lobby using an ID or a shared link.",
+        ],
+        [
+          "The Dungeon Master at the helm.",
+          "A DM runs the game and draws cards while the group follows along in real time through Pusher.",
+        ],
+        [
+          "From idea to webapp.",
+          "A final-semester project focused on turning a game concept into an interactive experience.",
+        ],
+      ],
+    },
     features: [
       [
         "Saml eventyrerne.",
@@ -138,6 +206,28 @@ export const projects = [
     github: "https://github.com/Schmidtii123/Webdoc",
     intro:
       "På andet semester arbejdede vi med en interaktiv webdokumentar om kunstneren Mark Ebert. Projektet kombinerer multimediedesign og webudvikling for at fortælle historien om hans kreative rejse.",
+    en: {
+      category: "Interactive story",
+      type: "Web documentary",
+      description:
+        "Meet the artist behind the work. An interactive web documentary featuring visual storytelling and parallax effects.",
+      intro:
+        "During my second semester, we created an interactive web documentary about the artist Mark Ebert. The project combines multimedia design and web development to tell the story of his creative journey.",
+      features: [
+        [
+          "The story at the centre.",
+          "A visual narrative that invites visitors to explore the artist's work.",
+        ],
+        [
+          "Motion with purpose.",
+          "Parallax effects add depth to the experience as visitors move through the story.",
+        ],
+        [
+          "Where design meets code.",
+          "A student project with room to experiment with interactive storytelling on the web.",
+        ],
+      ],
+    },
     features: [
       [
         "Historien i centrum.",

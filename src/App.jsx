@@ -8,10 +8,11 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import ProjectDetail from "./pages/ProjectDetail";
-import { projects } from "./data/projects";
+import { useLanguage } from "./i18n";
 
 export default function App() {
   const { pathname, hash } = useLocation();
+  const { language, projects, t } = useLanguage();
   useEffect(() => {
     const project = projects.find(
       (item) => pathname === `/projekter/${item.slug}`,
@@ -19,8 +20,11 @@ export default function App() {
     document.title = project
       ? `${project.title} — Emil Schmidt`
       : pathname === "/projekter"
-        ? "Projekter — Emil Schmidt"
-        : "Emil Schmidt — Webudvikler";
+        ? t("pageTitleProjects")
+        : t("pageTitleHome");
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", t("metaDescription"));
     const frame = requestAnimationFrame(() => {
       if (hash)
         document
@@ -29,11 +33,11 @@ export default function App() {
       else window.scrollTo({ top: 0, behavior: "instant" });
     });
     return () => cancelAnimationFrame(frame);
-  }, [pathname, hash]);
+  }, [pathname, hash, language, projects, t]);
   return (
     <>
       <a className="skip-link" href="#main">
-        Spring til indhold
+        {t("skip")}
       </a>
       <Nav />
       <main id="main" tabIndex={-1}>
@@ -45,11 +49,11 @@ export default function App() {
             path="*"
             element={
               <section className="container not-found">
-                <span className="eyebrow">404 / En lille omvej</span>
-                <h1>Her er vist tomt.</h1>
-                <p>Men der er masser at udforske på forsiden.</p>
+                <span className="eyebrow">{t("notFoundEyebrow")}</span>
+                <h1>{t("notFoundTitle")}</h1>
+                <p>{t("notFoundText")}</p>
                 <Link className="button button-dark" to="/">
-                  Tilbage til forsiden <ArrowUpRight />
+                  {t("backHome")} <ArrowUpRight />
                 </Link>
               </section>
             }

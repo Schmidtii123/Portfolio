@@ -12,7 +12,7 @@ export default function Nav() {
           <NavLink to="/projekter">Projekter</NavLink>
           <Link to="/#about">Om mig</Link>
           <Link className="nav-contact" to="/#contact">
-            Lad os tale <span aria-hidden="true"><ArrowUpRight /></span>
+            Kontakt mig <span aria-hidden="true"><ArrowUpRight /></span>
           </Link>
         </div>
       </nav>

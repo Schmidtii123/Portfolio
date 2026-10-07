@@ -83,6 +83,60 @@ export const projects = [
     ],
   },
   {
+    slug: "faceit-roast-bot",
+    title: "Faceit Roast Bot",
+    category: "Bot & automatisering",
+    type: "Discord & kampdata",
+    image: "/faceit-roast-bot.png",
+    theme: "faceit-bot",
+    status: "Under udvikling",
+    description:
+      "En serverless Discord-bot, der overvåger FACEIT-spillere og forvandler nye CS2-kampe til performance-analyser, Bot-rating og danske roasts.",
+    stack: ["TypeScript", "Node.js"],
+    demo: "https://faceit-roast-bot.schmidtii2000.workers.dev/health",
+    demoLabel: "Se live health check",
+    intro:
+      "FaceitRoastBot kobler FACEITs kampdata sammen med Discord i et automatisk og driftssikkert flow. Projektet kører på Cloudflare Workers og D1, analyserer spillere mod både holdet og lobbyen og genererer forklarlige vurderinger og mere end 100 regelbaserede roast-formuleringer — helt uden en betalt AI-tjeneste.",
+    features: [
+      [
+        "Automatisk kampovervågning.",
+        "Et shardet cron-flow finder nye FACEIT-kampe, lader statistikken modne og behandler dem gennem en D1-baseret kø med deduplikering og kontrollerede retries.",
+      ],
+      [
+        "Forklarlig analyse og dansk roast.",
+        "En transparent Bot-rating kombinerer K/D, ADR, K/R, resultat og sekundær impact. En deterministisk regelmotor omsætter derefter spillerens faktiske præstation til ros eller roast.",
+      ],
+      [
+        "Discord som brugerflade.",
+        "Resultatet leveres som et visuelt embed med statistik, placeringer, ELO, map og matchlink. Slash-kommandoen /latest kan hente en valgfri spillers seneste kamp.",
+      ],
+    ],
+    en: {
+      category: "Bot & automation",
+      type: "Discord & match data",
+      status: "In development",
+      description:
+        "A serverless Discord bot that monitors FACEIT players and transforms new CS2 matches into performance analysis, a Bot Rating and Danish roasts.",
+      demoLabel: "View live health check",
+      intro:
+        "FaceitRoastBot connects FACEIT match data with Discord through an automated and reliable workflow. Running on Cloudflare Workers and D1, it evaluates players against both their team and the full lobby and generates explainable ratings and more than 100 rule-based roast lines — without relying on a paid AI service.",
+      features: [
+        [
+          "Automatic match monitoring.",
+          "A sharded cron workflow detects new FACEIT matches, allows statistics to mature and processes them through a D1-backed queue with deduplication and controlled retries.",
+        ],
+        [
+          "Explainable analysis and Danish roasts.",
+          "A transparent Bot Rating combines K/D, ADR, K/R, the result and secondary impact. A deterministic rule engine then turns the player's actual performance into praise or a roast.",
+        ],
+        [
+          "Discord as the interface.",
+          "Results arrive as a visual embed with statistics, rankings, ELO, map artwork and a match link. The /latest command retrieves any player's latest completed match.",
+        ],
+      ],
+    },
+  },
+  {
     slug: "bookify",
     title: "Bookify",
     category: "Webapp",

@@ -50,7 +50,7 @@ export default function ProjectDetail() {
             target="_blank"
             rel="noreferrer"
           >
-            {en ? "Open live demo" : "Åbn live demo"} <span aria-hidden="true"><ArrowUpRight /></span>
+            {project.demoLabel || (en ? "Open live demo" : "Åbn live demo")} <span aria-hidden="true"><ArrowUpRight /></span>
           </a>
           {project.github && (
             <a

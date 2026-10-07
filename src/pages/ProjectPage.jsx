@@ -10,6 +10,7 @@ export default function ProjectPage() {
   const filters = [
     { id: "all", label: en ? "All" : "Alle" },
     { id: "webapps", label: "Webapps" },
+    { id: "bots", label: en ? "Bots & automation" : "Bots & automatisering" },
     { id: "stories", label: en ? "Interactive stories" : "Interaktive fortællinger" },
   ];
   const [filter, setFilter] = useState("all");
@@ -17,6 +18,7 @@ export default function ProjectPage() {
     (project) =>
       filter === "all" ||
       (filter === "webapps" && project.category === "Webapp") ||
+      (filter === "bots" && ["Bot & automatisering", "Bot & automation"].includes(project.category)) ||
       (filter === "stories" && ["Interaktiv fortælling", "Interactive story"].includes(project.category)),
   );
   const cardLabels = {
